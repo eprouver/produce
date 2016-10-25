@@ -34,7 +34,6 @@ $logo-text
   text-decoration: none
   color: #fff
   font-weight: 300
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
 
 #logo
   @extend $logo-text
@@ -54,7 +53,21 @@ $logo-text
   letter-spacing: 1px
 
 #subtitle-wrap
-  margin-top: subtitle-size
+  position: absolute;
+  top: 18.6vmin;
+  right: -15px;
+  width: 38vw;
+  background: rgba(255, 255, 255, 0.81);
+  padding: 1em;
+  font-size: 1.5vmin;
+  padding-bottom: 1.3em;
+  padding-right: 45px;
+  border-radius: 20px;
+  #subtitle
+    color: #2e2435;
+    font-size: 1.4em;
+    letter-spacing: -0.01em;
+    font-weight: bold;
 
 #main-nav
   float: left
@@ -65,7 +78,6 @@ $nav-link
   color: #fff
   opacity: 0.6
   text-decoration: none
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2)
   transition: opacity 0.2s
   display: block
   padding: 20px 15px

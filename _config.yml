@@ -4,8 +4,8 @@
 
 # Site
 title: Produce Produce
-subtitle:
-description: My whole trip to go off grid and open a produce stand.
+subtitle: One guy's goal to go off grid and make a produce stand.
+description: One guy's goal to go off grid and make a produce stand.
 author: Daniel Cohen
 language: EN, FR
 timezone:
@@ -52,7 +52,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: Do, MMM YYYY
 time_format: HH:mm:ss
 
 # Pagination
