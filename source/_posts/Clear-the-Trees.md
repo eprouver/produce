@@ -51,7 +51,7 @@ function enterer() {
 
 for (var i = 0; i < 80; i++) {
   var h = Math.random() * 95;
-  var w = (Math.random() * 95) - 10;
+  var w = (Math.random() * 95);
   grass.append(tree.clone().removeClass('hide').css({
     top: (h - 15) + '%',
     'z-index': Math.round(h),
