@@ -178,12 +178,6 @@
   position: relative
   @media mq-normal
     margin: block-margin 0
-    &:before
-      absolute-center(8px)
-      content: ""
-      border-radius: 50%
-      background: color-border
-      box-shadow: 0 1px 2px #fff
 
 .article-nav-link-wrap
   text-decoration: none
@@ -201,29 +195,30 @@
 
 #article-nav-newer
   @media mq-normal
-    float: left
+    float: right
     text-align: right
     padding-right: 20px
 
 #article-nav-older
   @media mq-normal
-    float: right
+    float: left
     text-align: left
     padding-left: 20px
 
 .article-nav-caption
   text-transform: uppercase
   letter-spacing: 2px
-  color: color-border
+  color: #2E2435
   line-height: 1em
   font-weight: bold
   #article-nav-newer &
     margin-right: -2px
 
 .article-nav-title
-  font-size: 0.85em
-  line-height: line-height
-  margin-top: 0.5em
+  font-size: 1.85em;
+  line-height: 1.6em;
+  margin-top: 0.5em;
+  color: #2E2435;
 
 .article-share-box
   position: absolute

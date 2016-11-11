@@ -2,7 +2,9 @@
 menu:
   Home: /
   Goals: /goals
-rss: /atom.xml
+  Finances: /finances
+#/atom.xml
+rss: false
 
 # Content
 excerpt_link: Read More
