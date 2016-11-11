@@ -1,9 +1,6 @@
 <header id="header">
-  <% if(page.canonical_path == 'index.html'){ %>
   <div id="banner"></div>
-  <% } %>
   <div id="header-outer" class="outer">
-    <% if(page.canonical_path == 'index.html'){ %>
     <div id="header-title" class="inner">
 
         <a href="<%- url_for() %>" id="logo">
@@ -17,7 +14,6 @@
         </h2>
       <% } %>
     </div>
-    <% } %>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
