@@ -2,6 +2,8 @@
 title: Clear the Trees
 date: 2016-11-04 16:12:14
 tags:
+  - clearing-trees
+  - interactive
 ---
 
 One of the first things I'm going to have to take on is clearing a lot of trees.

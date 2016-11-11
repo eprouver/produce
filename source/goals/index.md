@@ -12,7 +12,7 @@ date: 2016-10-25 17:04:20
   2. Make outhouse
   3. Make shower
 <p>I decided on getting a big canvas tent for my first camp.  This way I can start to buy furniture that will one day be moved into the log cabin and, if all goes well, eventually into the tiny home.</p>
-4. **Clear trees**
+4. [**Clear trees**](/tags/clearing-trees/) 
 <p>This will be a huge task! I'm excited to go all lumberjack and use the wood on the land to build something great.</p>
 5. **Dry logs**
 <p>Drying logs will take up to a year. It will also take a lot of dedicated space. But, hopefully, I'll learn a lot about moving logs when I pile them up.</p>

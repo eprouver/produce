@@ -1,0 +1,124 @@
+#slot-holder
+  *
+    margin: 0
+    padding: 0
+  .screen
+    margin: 10px
+    height: 306px
+    overflow: hidden
+    display: flex
+    flex-direction: row
+    margin: 30px 0
+  .spinner
+    position: relative
+    text-align: center
+    display: inline-block
+    flex-grow: 1
+  .spinner >div
+    position: relative
+    display: block
+  .spinner .middle
+    overflow: hidden
+  .cell
+    display: block
+    height: 100px
+    line-height: 70px
+    background-color: white
+    font-size: 10em
+    overflow: hidden
+    box-sizing: border-box
+    margin: 2px
+    position: relative
+    transition: all 0.5s ease
+  @media (min-width: 700px)
+    .cell:before
+      content: ''
+      position: absolute
+      height: 0
+      width: 0
+      border: 30px solid
+      top: 18px
+      left: -1px
+      border-top-color: transparent
+      border-right-color: transparent
+      border-bottom-color: transparent
+      border-left-width: 5vw
+    .cell:after
+      content: ''
+      position: absolute
+      height: 0
+      width: 0
+      border: 30px solid
+      top: 18px
+      right: -1px
+      border-top-color: transparent
+      border-left-color: transparent
+      border-bottom-color: transparent
+      border-right-width: 5vw
+  .cell > div
+    margin: 0 auto
+    position: relative
+    font-size: 80px
+    top: -9px
+  .cell > div.animated
+    animation-iteration-count: infinite
+  #spin
+    border: 1px solid #666;
+    font-size: 3em;
+    padding: 0px 50px;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    background: #66497B;
+    border-bottom: 5px solid #2E2435;
+    border-radius: 0.4em;
+    text-shadow: 0 -1px 1px #2E2435;
+    color: white;
+  .A
+    color: orange
+    border: 5px solid orange
+  .B
+    color: rgb(135, 206, 235)
+    border: 5px solid rgb(135, 206, 235)
+  .C
+    color: rgb(226, 147, 226)
+    border: 5px solid rgb(226, 147, 226)
+  .D
+    color: #39CCCC
+    border: 5px solid #39CCCC
+  .E
+    color: #B10DC9
+    border: 5px solid #B10DC9
+  .F
+    color: #F012BE
+    border: 5px solid #F012BE
+  .G
+    color: #2ECC40
+    border: 5px solid #2ECC40
+  .top:before
+    content: ""
+    font-family: 'Glyphicons Halflings'
+    display: block
+    height: 100px
+    line-height: 70px
+    font-size: 7em
+    overflow: hidden
+    color: rgb(135, 206, 235)
+    border: 5px solid rgb(135, 206, 235)
+    box-sizing: border-box
+    margin: 2px
+    position: absolute
+    left: 0
+    width: 100%
+    top: -105px
+  .spinner-0 .middle
+    filter: url("#blur")
+    -webkit-filter: url("#blur")
+  .spinner-1 .middle
+    filter: url("#blur2")
+    -webkit-filter: url("#blur2")
+  .spinner-2 .middle
+    filter: url("#blur3")
+    -webkit-filter: url("#blur3")
+  div[disabled=disabled]
+    opacity: 0.5
