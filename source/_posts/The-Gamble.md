@@ -5,6 +5,10 @@ tags:
   - interactive
 ---
 
+So, it's time for me to go off grid.
+
+I know it's a gamble, but I think it's worth it.  In honor of this gamble I made a little slot-machine where winning unlocks the achievements I hope to gain in this adventure.
+
 {% raw %}
 <div id="slot-holder">		
 <div id="slot" class="screen">
@@ -362,3 +366,7 @@ var offheight = document.getElementsByClassName('top')[0].clientHeight + documen
 })();
 </script>
 {% endraw %}
+
+Ironically, in the UK a slot-machine is called a "Fruit Machine"... I'll take that as a good sign.
+
+Please subscribe and follow me on social media - I plan to update frequently.
