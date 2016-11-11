@@ -29,7 +29,6 @@ tags:
 
 <script>
 (function(){
-var icons = ["fa fa-truck", "fa fa-home", "fa fa-bathtub", "fa fa-map-signs", "fa fa-leaf","fa fa-cutlery", "fa fa-tree"];
 
 var $scope = {},
   animationEnd = ['webkitTransitionEnd', 'mozTransitionEnd', 'oTransitionEnd', 'msTransitionEnd', 'transitionEnd'];
@@ -38,39 +37,32 @@ $scope.spintime = 800;
 $scope.localslot = {
   "title": "",
   "symbols": [{
-    "wild": false,
-    "scatter": false,
-    "frequency": 2,
+    "win": "Independence",
+    "icon": "fa fa-truck",
     "name": "A"
   }, {
-    "frequency": 2,
-    "wild": false,
-    "scatter": false,
+    "win": "A Mortgage Free Home",
+    "icon": "fa fa-home",
     "name": "B"
   }, {
-    "frequency": 2,
-    "wild": false,
-    "scatter": false,
+    "win": "Modern Comforts",
+    "icon": "fa fa-bathtub",
     "name": "C"
   }, {
-    "frequency": 2,
-    "wild": false,
-    "scatter": false,
+    "win": "Life Direction",
+    "icon": "fa fa-map-signs",
     "name": "D"
   }, {
-    "frequency": 2,
-    "wild": false,
-    "scatter": false,
+    "win": "Financial Security",
+    "icon": "fa fa-bank",
     "name": "E"
   }, {
-    "frequency": 2,
-    "wild": false,
-    "scatter": false,
+    "win": "Healthy Food",
+    "icon": "fa fa-cutlery",
     "name": "F"
   }, {
-    "frequency": 2,
-    "wild": false,
-    "scatter": false,
+    "win": "Respect for Nature",
+    "icon": "fa fa-leaf",
     "name": "G"
   }],
   "paylines": [
@@ -208,7 +200,8 @@ function createcell(dest, r) {
   div.classList.add($scope.localslot.symbols[rand].name);
   div.setAttribute('data', $scope.localslot.symbols[rand].name);
   div.classList.add('r' + r);
-  div.innerHTML = '<div class="' + icons[rand] + '"></div>';
+  div.innerHTML = '<div class="' + $scope.localslot.symbols[rand].icon + '"></div>';
+  div.dataset.win = $scope.localslot.symbols[rand].win;
   dest.appendChild(div);
   return div.cloneNode(true);
 }
@@ -318,6 +311,25 @@ function drawmachine() {
           winarray[i].divs[j].style.color = 'black';
           winarray[i].divs[j].style.borderColor = 'black';
           winarray[i].divs[j].style.backgroundColor = '#FFEB3B'
+        }
+
+        if(window.swal){
+          swal({title: winarray[i].divs[0].dataset.win,
+            text: 'Achievement Unlocked!',
+            type: 'success',
+            animation: false});
+
+            $scope.localslot.symbols = $scope.localslot.symbols.filter(function(v){
+              return v.win != winarray[i].divs[0].dataset.win
+            });
+
+            if($scope.localslot.symbols.length == 0){
+              setTimeout(function() {
+                $('#slot-holder').slideUp(1000);
+                document.getElementById('slot-holder').classList.add('animated')
+                document.getElementById('slot-holder').classList.add('zoomOut')
+              }, 2000);
+            }
         }
       }
     }
