@@ -135,3 +135,364 @@
     $container.removeClass('mobile-nav-on');
   });
 })(jQuery);
+
+var global_plants = [{
+name: 'Arugula',
+amount: '5',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Asparagus',
+amount: '50',
+sNoun: 'root',
+pNoun: 'roots'
+},
+{
+name: 'Dried Bean',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Fava Bean',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Chickpea',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Lima Bean',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Snap Bean',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Soy Bean',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Beet',
+amount: '8',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Broccoli',
+amount: '4',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Brussel Sprout',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Cabbage',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Carrot',
+amount: '40',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Cauliflower',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Celery',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Chayote',
+amount: '1',
+sNoun: 'vine',
+pNoun: 'vines'
+},
+{
+name: 'Chicory',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Bok Choy',
+amount: '8',
+sNoun: 'head',
+pNoun: 'heads'
+},
+{
+name: 'Collard',
+amount: '3',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Corn',
+amount: '20',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Cucumber',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Eggplant',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Endive',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Garlic',
+amount: '16',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Horseradish',
+amount: '1',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Jicama',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Kale',
+amount: '5',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Kohlrabi',
+amount: '5',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Leek',
+amount: '12',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Lettuce',
+amount: '10',
+sNoun: 'head',
+pNoun: 'heads'
+},
+{
+name: 'Melon',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Mustard',
+amount: '10',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Okra',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Onion',
+amount: '20',
+sNoun: 'set',
+pNoun: 'sets'
+},
+{
+name: 'Parsnip',
+amount: '10',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Pea',
+amount: '30',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Pepper',
+amount: '3',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Potato',
+amount: '10',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Pumpkin',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Radiccio',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Radish',
+amount: '15',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Rhubarb',
+amount: '3',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Rutabaga',
+amount: '15',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Salsify',
+amount: '10',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Scallion',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Shallot',
+amount: '6',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Sorrel',
+amount: '3',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Spinach',
+amount: '15',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Summer Squash',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Winter Squash',
+amount: '1',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Sunchoke',
+amount: '8',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Sunflower',
+amount: '1',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Sweet Potato',
+amount: '8',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Swiss Chard',
+amount: '3',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Tomatillo',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Cherry Tomato',
+amount: '4',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Cooking Tomato',
+amount: '5',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Slicing Tomato',
+amount: '4',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Turnip',
+amount: '10',
+sNoun: 'plant',
+pNoun: 'plants'
+},
+{
+name: 'Watermelon',
+amount: '2',
+sNoun: 'plant',
+pNoun: 'plants'
+}]

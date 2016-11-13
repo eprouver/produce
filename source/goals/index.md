@@ -1,6 +1,6 @@
 ---
 title: O.G. Fruit Stand Goals
-date: 2016-10-25 17:04:20
+date: 2016-10-25 17:00:20
 ---
 
 1. **Apply for water connection**
@@ -12,7 +12,7 @@ date: 2016-10-25 17:04:20
   2. Make outhouse
   3. Make shower
 <p>I decided on getting a big canvas tent for my first camp.  This way I can start to buy furniture that will one day be moved into the log cabin and, if all goes well, eventually into the tiny home.</p>
-4. [**Clear trees**](/tags/clearing-trees/) 
+4. [**Clear trees**](/tags/clearing-trees/)
 <p>This will be a huge task! I'm excited to go all lumberjack and use the wood on the land to build something great.</p>
 5. **Dry logs**
 <p>Drying logs will take up to a year. It will also take a lot of dedicated space. But, hopefully, I'll learn a lot about moving logs when I pile them up.</p>
@@ -44,3 +44,5 @@ date: 2016-10-25 17:04:20
 <p>Because I'm not too far from town, a small electric vehicle will save gas money for small trips.</p>
 18. **Build incredible tiny home**
 <p>All has gone well - I'm seeing some income - I feel stable and happy.  Time to make a more permanent residence. Now my log cabin can be used for guests and storage.</p>
+19. **Get a dog**
+<p>Comfortable house, financially stable enough to buy dog food... I'll get myself an animal companion!</p>
