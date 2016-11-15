@@ -16,6 +16,7 @@ url: http://ogfruitstand.surge.sh/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+disqus_shortname: ogfruitstand
 
 # Directory
 source_dir: source
