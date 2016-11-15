@@ -7,6 +7,8 @@ date: 2016-10-25 17:00:20
 <p>The area where I bought land already has an existing communal well.  I need to apply to the community to have access and will probably need to pay for a connection.  Hopefully this will not be too expensive.</p>
 2. **Survey land**
 <p>I plan to mark the land (at least with spray paint) so that I make sure I'm building in the right place.  There's already a physical structure on the land, so I can find it approximately first</p>
+  1. Price lumber removal
+  2. Determine eventual location of cabin
 3. **Set up camp**
   1. Make cooking area
   2. Make outhouse
