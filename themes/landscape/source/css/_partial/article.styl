@@ -4,7 +4,38 @@
 .article-inner
   @extend $block
   overflow: hidden
-  //border-left: 4px solid #5E357D;
+  .products
+    text-align:center;
+    padding: 20px 20px 0;
+    margin-top: block-margin
+    .products-title
+        text-align:left;
+        text-decoration: none;
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #555;
+        line-height: 1.1em;
+    img
+     max-width: 18%
+     transition: 1s ease all
+    a
+      position:relative
+      &:after
+        content: "\f25a";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        position: absolute;
+        top: 120%;
+        right: 0
+        font-size: 6vw;
+        pointer-events: none;
+        opacity: 0;
+        transition: all 0.25s ease;
+    a:hover
+      &:after
+        opacity: 1
+        top: 50%
+        right: 10%
 
 .article-meta
   clearfix()
@@ -177,47 +208,58 @@
   clearfix()
   position: relative
   @media mq-normal
-    margin: block-margin 0
+    margin: 10px 0
 
 .article-nav-link-wrap
   text-decoration: none
   text-shadow: 0 1px #fff
   color: color-grey
   box-sizing: border-box
-  margin-top: block-margin
+  margin-top: 10px
   text-align: center
-  display: block
+  display: inline-block;
+  width: 50%;
+  float: left;
   &:hover
     color: color-default
-  @media mq-normal
-    width: 50%
-    margin-top: 0
+
 
 #article-nav-newer
   @media mq-normal
     float: right
     text-align: right
-    padding-right: 20px
+    .article-nav-title
+      padding-right: 1em;
 
 #article-nav-older
   @media mq-normal
     float: left
     text-align: left
-    padding-left: 20px
+    .article-nav-title
+      padding-left: 1em;
 
 .article-nav-caption
-  text-transform: uppercase
-  letter-spacing: 2px
-  color: #2E2435
-  line-height: 1em
-  font-weight: bold
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8349AD;
+  line-height: 1em;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-shadow: 0 1px 0 black;
+  .fa
+    font-size: 3em;
+    position: relative;
+    top: 0.225em;
+    display:none;
+    @media mq-normal
+      display:inline-block
   #article-nav-newer &
     margin-right: -2px
 
 .article-nav-title
   font-size: 1.85em;
   line-height: 1.6em;
-  margin-top: 0.5em;
+  margin-top: 1em;
   color: #2E2435;
 
 .article-share-box

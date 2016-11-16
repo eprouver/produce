@@ -22,6 +22,16 @@
         <%- post.content %>
       <% } %>
     </div>
+
+    <% if (post.products){ %>
+      <div class="products">
+      <h2 class="products-title">The Stuff:</h2>
+      <% for (i in post.products){ %>
+        <%- site.data.products[post.products[i]].image %>
+      <% } %>
+      </div>
+    <% } %>
+
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
       <% if (post.comments && config.disqus_shortname){ %>
@@ -34,6 +44,7 @@
     <%- partial('post/nav') %>
   <% } %>
 </article>
+
 
 <% if (!index && post.comments && config.disqus_shortname){ %>
 <section id="comments">
