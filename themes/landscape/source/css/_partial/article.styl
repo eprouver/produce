@@ -4,6 +4,9 @@
 .article-inner
   @extend $block
   overflow: hidden
+  &.article-index-inner
+    max-height: 100px
+    overflow:hidden;
   .products
     text-align:center;
     padding: 20px 20px 0;
@@ -75,7 +78,8 @@
 
 .article-title
   text-decoration: none
-  font-size: 2em
+  font-size: 2.6em
+  padding-bottom: 0.1em;
   font-weight: bold
   color: color-default
   line-height: line-height-title
@@ -167,14 +171,16 @@
       margin-top: 0
 
 .article-more-link a
-  display: inline-block
-  line-height: 1em
-  padding: 6px 15px
-  border-radius: 15px
-  background: color-background
-  color: color-grey
-  text-shadow: 0 1px #fff
-  text-decoration: none
+  display: inline-block;
+  line-height: 1em;
+  padding: 0.5em 0;
+  border-radius: 1em;
+  background: #442F54;
+  color: #D6CBDE;
+  text-decoration: none;
+  font-size: 2em;
+  min-width: 50%;
+  text-align: center;
   &:hover
     background: color-link
     color: #fff

@@ -44,6 +44,7 @@
     </footer>
   </div>
 
+  <% if (!index) { %>
   <div class="article-adholder">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Bottom of Article -->
@@ -55,6 +56,7 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
+  <% } %>
 
   <% if (!index){ %>
     <%- partial('post/nav') %>

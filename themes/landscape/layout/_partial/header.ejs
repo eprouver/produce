@@ -225,8 +225,9 @@ if (typeof localStorage !== 'undefined') {
   }
 
   if(saved){
-    $('#header-title').hide(); $('#header-game').show();
+    $('#header-title').hide(); $('#header-game').show().addClass('slideInDown');
     window.drawGarden();
+    harvestall();
   }
 })(startGarden);
 
@@ -270,6 +271,7 @@ if (typeof localStorage !== 'undefined') {
           <br/>
           <div class="text-muted">
             <p>Click dirt to plant.</p>
+            <p>Planted tiles will grow over time.</p>
             <p>The garden expands as you level up.</p>
             <br/><br/>
             <div id="incg-harvestall">
