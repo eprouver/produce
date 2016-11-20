@@ -329,7 +329,8 @@ function drawmachine() {
 
             if($scope.localslot.symbols.length == 0){
               setTimeout(function() {
-                $('#slot-holder').slideUp(1000);
+                $('#slot-holder').slideUp(1000, function(){
+                });
                 document.getElementById('slot-holder').classList.add('animated')
                 document.getElementById('slot-holder').classList.add('zoomOut')
               }, 2000);

@@ -23,7 +23,7 @@
       <% } %>
     </div>
 
-    <% if (post.products && !index){ %>
+    <% if (post.products){ %>
       <div class="products">
       <h2 class="products-title">Checkout The Stuff:</h2>
       <br/>
@@ -43,6 +43,19 @@
       <%- partial('post/tag') %>
     </footer>
   </div>
+
+  <div class="article-adholder">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Bottom of Article -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-7699323664930736"
+         data-ad-slot="2640131407"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
   <% if (!index){ %>
     <%- partial('post/nav') %>
   <% } %>
