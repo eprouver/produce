@@ -171,21 +171,24 @@
       margin-top: 0
 
 .article-more-link a
-  display: inline-block;
+  display: block;
   line-height: 1em;
-  padding: 0.5em 0;
-  border-radius: 1em;
-  background: #442F54;
-  color: #D6CBDE;
+  padding: 0.7em 1em;
+  border-radius: 1.4em;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.4em;
   min-width: 50%;
   text-align: center;
+  transition: all 0.15s ease;
+  border: 2px solid #792EBD;
+  color: #792EBD;
+  margin: 2em 7vw 0;
+  background: #FFFFFF;
+  border-bottom: 4px solid #792EBD;
   &:hover
-    background: color-link
+    background: lighten(color-link, 50%)
     color: #fff
     text-decoration: none
-    text-shadow: 0 1px darken(color-link, 20%)
 
 .article-footer
   clearfix()

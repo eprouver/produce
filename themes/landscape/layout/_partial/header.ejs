@@ -170,14 +170,14 @@ if (typeof localStorage !== 'undefined') {
       var col = $(v).find('.plot').data('col');
       var plot = myGarden.plots[row][col];
       if (plot.l > harvest) {
-        $(v).find('.plot').addClass('harvest');
+        $(v).find('.plot').addClass('harvest')
         return;
       }
       if (plot.l > 0 && plot.l <= harvest)
         setTimeout(function() {
           plot.l += 1;
           if (plot.l > harvest) {
-            $(v).find('.plot').addClass('harvest');
+            $(v).find('.plot').addClass('harvest')
           }
 
           addProgress(1);
@@ -208,7 +208,7 @@ if (typeof localStorage !== 'undefined') {
           plot.addClass('plant');
           rowHold.append($('<div>').addClass('plot-hold').append(plot));
         } else if (row[c].l > harvest) {
-          plot.addClass('plant').addClass('harvest');
+          plot.addClass('plant').addClass('harvest')
           rowHold.append($('<div>').addClass('plot-hold').append(plot));
         }
       })
@@ -285,6 +285,7 @@ if (typeof localStorage !== 'undefined') {
       </div>
     </div>
 
+    <a id="nav-anchor"></a>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
