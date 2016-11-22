@@ -23,7 +23,7 @@
       <% } %>
     </div>
 
-    <% if (post.products){ %>
+    <% if (post.products && !(post.excerpt && index)){ %>
       <div class="products">
       <h2 class="products-title">Checkout The Stuff:</h2>
       <br/>
