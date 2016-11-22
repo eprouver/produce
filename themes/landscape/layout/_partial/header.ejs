@@ -181,7 +181,7 @@ if (typeof localStorage !== 'undefined') {
           }
 
           addProgress(1);
-          $(v).append($('<div>').addClass('point-up').text('+1').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+          $(v).append($('<div>').addClass('point-up').css({color: 'lime'}).text('+1').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             myGarden.plots[row][col] = plot;
             $(this).remove();
           }))
@@ -225,7 +225,8 @@ if (typeof localStorage !== 'undefined') {
   }
 
   if(saved){
-    $('#header-title').hide(); $('#header-game').show().addClass('slideInDown');
+    $('#header-title').hide();
+    $('#header-game').show();
     window.drawGarden();
     harvestall();
   }else{
@@ -256,8 +257,8 @@ if (typeof localStorage !== 'undefined') {
 
     <div id="header-game" class="animated" style="display:none">
       <div class="flex-row">
-        <div class="flex-column" style="max-width: 400px">
-          <h1><a href="<%- url_for() %>">Off-Grid<br/>Fruit Stand</a></h1>
+        <div class="flex-column" style="max-width: 400px; flex-grow:1">
+          <h1><a href="<%- url_for() %>">Off-Grid<br/>Fruit Stand Game</a></h1>
 
           <div>
             <label>Level:</label>
@@ -273,18 +274,18 @@ if (typeof localStorage !== 'undefined') {
           <br/>
           <br/>
           <div class="text-muted">
-            <p>Click the brown dirt.</p>
-            <p>Green plants will grow over time.</p>
-            <p>Harvest ★s &amp; grow the garden.</p>
+            <p>Click the brown dirt to grow plants.</p>
+            <p>Growing plants earn points and grow into ★s.</p>
+            <p>Level up for a bigger garden.</p>
             <br/><br/>
             <div id="incg-harvestall">
             </div>
 
-            <div class="widget-wrap">
+            <!-- <div class="widget-wrap">
               <div class="widget">
                 <%- partial('_widget/social') %>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="flex-column">

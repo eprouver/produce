@@ -8,11 +8,17 @@ tags:
 
 One of the first things I'm going to have to take on is clearing a lot of trees.
 
+Having been raised on a steady diet of Arbor day saplings and FernGully - I might find it sad to cut down a lot of trees... so why not destroy a bunch of cartoon trees first.
+
+Remember, the forest was once a terrifying place of wolves and witches, then: civilization.
+
+Mouse over the trees below to clear them, or double click to clear the whole area.  
+
 {% raw %}
 
 <div id="cut-the-trees" style="display:none">
 <div class="grass">
-  <h1 class="text-center">Clear the Trees</h1>
+  <h1 class="text-center"></h1>
 </div>
 
 <div style="display:none">
@@ -36,36 +42,64 @@ $('#cut-the-trees').slideDown(1000);
 var tree = $('#cut-the-trees .tree');
 var grass = $('#cut-the-trees .grass');
 
-function enterer() {
-  var me = $(this).css({
-    'pointer-events': 'none'
-  })
-  me[0].classList.add('animated')
-  me[0].classList.add(Math.random() > 0.5 ? 'rotateOutDownLeft' : 'rotateOutDownRight');
-  setTimeout(function() {
-    me.remove();
-    if ($('.tree').length == 1) {
-      $('#cut-the-trees h1').text('You Did It!').addClass('animated tada');
+function enterer(x) {
+      var me = $(this).css({
+        'pointer-events': 'none'
+      })
+      me[0].classList.add('animated')
+      if(typeof x == 'number'){
+        me[0].classList.add($(me[0]).position().left > x ?'rotateOutDownLeft' : 'rotateOutDownRight');
+      }else{
+        me[0].classList.add(Math.random() > 0.5 ? 'rotateOutDownLeft' : 'rotateOutDownRight');
+      }
+
+      $('#post-Clear-the-Trees .article-share-link').removeClass('animated bounce share-now');
 
       setTimeout(function() {
-        $('#cut-the-trees').slideUp(1000);
-        document.getElementById('cut-the-trees').classList.add('animated')
-        document.getElementById('cut-the-trees').classList.add('zoomOut')
-      }, 2000);
-    }
-  }, 2000)
-}
+        me.remove();
+        if ($('.tree').length == 1) {
+          $('#cut-the-trees h1').text('You Did It!').addClass('animated tada');
+          $('.grass').empty();
 
-for (var i = 0; i < 60; i++) {
-  var h = Math.random() * 95;
-  var w = (Math.random() * 95);
-  grass.append(tree.clone().removeClass('hide').css({
-    top: h + '%',
-    'z-index': Math.round(h),
-    left: w + '%'
-  }).on('mouseenter', enterer))
-}
-  })();
+          setTimeout(function() {
+            $('#cut-the-trees').slideUp(1000, function(){
+              $('#cut-the-trees h1').remove();
+              $('#cut-the-trees').removeClass('animated zoomOut')
+              $('#post-Clear-the-Trees .article-share-link').addClass('animated bounce share-now');
+              setTimeout(init, 1000);
+              });
+            document.getElementById('cut-the-trees').classList.add('animated')
+            document.getElementById('cut-the-trees').classList.add('zoomOut')
+          }, 1000);
+        }
+      }, 500)
+    }
+
+    while ($('.grass .tree').length < 60) {
+      var h = Math.random() * 95;
+      var w = (Math.random() * 95);
+      grass.append(tree.clone().removeClass('hide').css({
+        top: h + '%',
+        'z-index': Math.round(h),
+        left: w + '%'
+      }).on('mouseenter', enterer))
+    }
+
+    $('#cut-the-trees .grass').on('dblclick', function(event){
+      clearSelection();
+      event.preventDefault();
+      event.stopPropagation();
+      $('.tree:visible').sort(function(a, b){
+        return Math.abs(event.pageX - $(a).offset().left) > Math.abs(event.pageX - $(b).offset().left) ? 1: -1
+        }).each(function(i, v){
+        setTimeout(function(){
+          enterer.apply(v, [event.pageX])
+        }, i * 50)
+      })
+    })
+})();
+
+
 </script>
 
 {% endraw %}
