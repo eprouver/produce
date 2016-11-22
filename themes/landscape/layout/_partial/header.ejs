@@ -228,6 +228,8 @@ if (typeof localStorage !== 'undefined') {
     $('#header-title').hide(); $('#header-game').show().addClass('slideInDown');
     window.drawGarden();
     harvestall();
+  }else{
+    $('#subtitle-wrap').show();
   }
 })(startGarden);
 
@@ -243,11 +245,11 @@ if (typeof localStorage !== 'undefined') {
           <div class="second">Fruit Stand</div>
         </a>
 
-        <h2 id="subtitle-wrap">
-          <a id="subtitle" onclick="$('#header-title').addClass('slideOutLeft'); $('#header-game').show().addClass('slideInRight'); window.drawGarden()">
+        <h2 id="subtitle-wrap" class="animated slideInRight" style="display:none" onclick="$('#header-title').addClass('slideOutLeft'); $('#header-game').show().addClass('slideInRight'); window.drawGarden()">
+          <a id="subtitle">
             <!-- <p><%= theme.subtitle %></p>
             <br/> -->
-            Play Along with a Virtual Garden
+            Click to play along with a Virtual Garden
           </a>
         </h2>
     </div>
@@ -256,6 +258,7 @@ if (typeof localStorage !== 'undefined') {
       <div class="flex-row">
         <div class="flex-column" style="max-width: 400px">
           <h1><a href="<%- url_for() %>">Off-Grid<br/>Fruit Stand</a></h1>
+
           <div>
             <label>Level:</label>
             <label id="incg-level" class="pull-right"></label>
@@ -270,11 +273,17 @@ if (typeof localStorage !== 'undefined') {
           <br/>
           <br/>
           <div class="text-muted">
-            <p>Click dirt to plant.</p>
-            <p>Planted tiles will grow over time.</p>
-            <p>The garden expands as you level up.</p>
+            <p>Click the brown dirt.</p>
+            <p>Green plants will grow over time.</p>
+            <p>Harvest ★s &amp; grow the garden.</p>
             <br/><br/>
             <div id="incg-harvestall">
+            </div>
+
+            <div class="widget-wrap">
+              <div class="widget">
+                <%- partial('_widget/social') %>
+              </div>
             </div>
           </div>
         </div>

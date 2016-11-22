@@ -56,15 +56,16 @@ $logo-text
 
 #subtitle-wrap
   position: absolute;
-  top: 18.6vmin;
+  top: 16.6vmin;
   right: -15px;
   width: 38vw;
   background: rgba(255, 255, 255, 0.81);
-  padding: 1em;
+  padding: 1.5em;
   font-size: 1.5vmin;
-  padding-bottom: 1.3em;
-  padding-right: 45px;
-  border-radius: 20px;
+  border-radius: 2em;
+  cursor: pointer;
+  &:hover
+    background: white
   #subtitle
     color: #2e2435;
     font-size: 1.4em;
@@ -180,16 +181,22 @@ $nav-link
   position: absolute;
   left: 0;
   min-height: 100%;
+  max-height: 100%;
   overflow: auto
+  .widget-wrap
+    margin: 0;
+    li
+      float: left;
+      margin-right: 5px;
   h1
     text-align: left;
     font-size: 3.2vw;
     padding-bottom: 1em;
     font-weight: bold;
     text-shadow: -1px 3px black, -3px 4px #7B2FC1, -4px 5px black;
-    a
-      color: white;
-      text-decoration: none;
+  a
+    color: white;
+    text-decoration: none;
   .btn
     text-align: center;
     background: #4AA055;

@@ -2,8 +2,8 @@
 title: Clear the Trees
 date: 2016-11-04 16:12:14
 tags:
-  - clearing-trees
-  - interactive
+  - mini-game
+  - land
 ---
 
 One of the first things I'm going to have to take on is clearing a lot of trees.
@@ -24,7 +24,13 @@ One of the first things I'm going to have to take on is clearing a lot of trees.
 </div>
 
 <script>
-setTimeout(function(){
+(function init(){
+
+  if(typeof $ !== "function" || typeof _ !== "function"){
+    setTimeout(init, 1000);
+    return;
+  }
+
 $('#cut-the-trees').slideDown(1000);
 
 var tree = $('#cut-the-trees .tree');
@@ -59,7 +65,7 @@ for (var i = 0; i < 60; i++) {
     left: w + '%'
   }).on('mouseenter', enterer))
 }
-  }, 3000)
+  })();
 </script>
 
 {% endraw %}
