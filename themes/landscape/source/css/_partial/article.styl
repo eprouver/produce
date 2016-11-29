@@ -1,5 +1,8 @@
 .article
   margin: block-margin 0
+  margin-bottom: 2em
+.article-meta
+  float: right
 
 .article-inner
   @extend $block
@@ -16,7 +19,7 @@
         text-decoration: none;
         font-size: 1.8em;
         font-weight: bold;
-        color: #555;
+        color: color-default
         line-height: 1.1em;
     img
      max-width: 100%
@@ -172,20 +175,19 @@
       margin-top: 0
 
 .article-more-link a
-  display: block;
+  display: inline-block;
   line-height: 1em;
-  padding: 0.7em 1em;
+  padding: 0.7em 4em;
   border-radius: 1.4em;
   text-decoration: none;
   font-size: 1.4em;
-  min-width: 50%;
   text-align: center;
   transition: all 0.15s ease;
-  border: 2px solid #792EBD;
-  color: #792EBD;
-  margin: 2em 7vw 0;
-  background: #FFFFFF;
-  border-bottom: 4px solid #792EBD;
+  border: 2px solid #792ebd;
+  color: #792ebd;
+  margin: 2em 0;
+  background: #fff;
+  border-bottom: 4px solid #792ebd;
   &:hover
     background: lighten(color-link, 50%)
     color: #fff
@@ -198,7 +200,7 @@
   padding-top: line-height
   margin: 0 article-padding article-padding
   a
-    color: #818078;
+    color: #792EBD
     text-decoration: none;
     font-size: 2.5vmin;
     &:hover
@@ -419,4 +421,7 @@ $article-gallery-ctrl
 
 .article-adholder
   text-align: center;
-  padding-top: 10px;
+  padding: 1em;
+  border-top: 1px solid #BBBBBB;
+  border-bottom: 1px solid #BBBBBB;
+  margin: 1.3em 0 0.5em 0;

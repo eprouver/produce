@@ -181,7 +181,7 @@ if (typeof localStorage !== 'undefined') {
           }
 
           addProgress(1);
-          $(v).append($('<div>').addClass('point-up').css({color: 'lime'}).text('+1').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+          $(v).append($('<div>').addClass('point-up').css({color: '#01FF70'}).text('+1').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             myGarden.plots[row][col] = plot;
             $(this).remove();
           }))
