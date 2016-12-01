@@ -42,7 +42,7 @@ Goats, I'm told, are great at clearing forested areas. So, in the uncleared area
 Two milk goats needed. Two because they're heard animals, and milk goats because I like goat cheese.
 
 12. **Dig a walipini**
-A walipini is an underground greenhouse from Bolivia.  Instead of digging a root cellar, I'll use this to boost year round harvesting, and I'll use the dirt I pull up to make an above ground "root cellar".
+A walipini is an underground greenhouse from Bolivia.  Instead of digging a root cellar, I'll use this to boost year round harvesting, and I'll use the earth I pull up to make an above ground "root cellar".
 
 13. **Build earthbag storage dome**
 Hopefully an earthbag structure will have sufficient thermal mass to act as a root cellar. If not, I'll use it for storing other things.
