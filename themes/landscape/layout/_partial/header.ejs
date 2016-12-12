@@ -151,6 +151,10 @@ if (typeof localStorage !== 'undefined') {
       return;
     }
 
+    if(plot.l == 0){
+      $(this).addClass('growing')
+    }
+
     addProgress(1);
     $(this).addClass(plotClass[plot.t]).append($('<div>').addClass('point-up').text('+1').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
       $(this).remove();
@@ -205,10 +209,10 @@ if (typeof localStorage !== 'undefined') {
         if (row[c].l == 0) {
           rowHold.append($('<div>').addClass('plot-hold').append(plot));
         } else if (row[c].l <= harvest) {
-          plot.addClass('plant');
+          plot.addClass('plant')
           rowHold.append($('<div>').addClass('plot-hold').append(plot));
         } else if (row[c].l > harvest) {
-          plot.addClass('plant').addClass('harvest')
+          plot.removeClass('plant').removeClass('growing').addClass('harvest')
           rowHold.append($('<div>').addClass('plot-hold').append(plot));
         }
       })
@@ -240,7 +244,7 @@ if (typeof localStorage !== 'undefined') {
 <header id="header">
   <div id="banner"></div>
   <div id="header-outer" class="outer">
-    <div id="header-title" class="inner animated">
+    <div id="header-title" class="inner">
         <a href="<%- url_for() %>" id="logo">
           <div class="first">Off-Grid</div>
           <div class="second">Fruit Stand</div>
@@ -255,7 +259,7 @@ if (typeof localStorage !== 'undefined') {
         </h2>
     </div>
 
-    <div id="header-game" class="animated" style="display:none">
+    <div id="header-game" style="display:none">
       <div class="flex-row">
         <div class="flex-column" style="max-width: 400px; flex-grow:1">
           <h1><a href="<%- url_for() %>">Off-Grid<br/>Fruit Stand Game</a></h1>
@@ -268,7 +272,7 @@ if (typeof localStorage !== 'undefined') {
           <div class="progress">
             <div id="incg-progress" class="progress-bar"></div>
           </div>
-          <label>★ Harvest:</label><br/>
+          <label>★ Harvest:</label>
           <label id="incg-harvested" class="pull-right">
           </label>
           <br/>
@@ -276,7 +280,7 @@ if (typeof localStorage !== 'undefined') {
           <div class="text-muted">
             <p>Click the brown dirt to grow plants.</p>
             <p>Growing plants earn points and grow into ★s.</p>
-            <p>Level up for a bigger garden.</p>
+            <p>Click for one point. Level up for more garden.</p>
             <br/><br/>
             <div id="incg-harvestall">
             </div>

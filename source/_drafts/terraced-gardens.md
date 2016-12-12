@@ -13,4 +13,8 @@ The rest of the land has a small wet-season stream running through the middle, s
 
 Perfect!  South facing slopes are great for growing vegetables. North facing slopes are great for many fruit trees.
 
+I understand the soil in Northern Arkansas is sandy and rocky, which isn't so much of a problem for the trees, but will be a problem for the garden beds I want to add in on the southern slope.
+
+In these beds I'll be trying out lasagna gardening and terra preta (mixing in charcoal and live yogurt).
+
 <!-- more -->
